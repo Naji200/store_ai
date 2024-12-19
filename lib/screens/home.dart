@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:store_ai/screens/liste_vetements.dart';
 import 'package:store_ai/screens/login.dart';
 
 class Home extends StatefulWidget {
@@ -18,7 +19,7 @@ class _HomePageState extends State<Home> {
         title: const Text('Home Page'),
         actions: [
           IconButton(
-            icon: const Icon(Icons.logout, color: Colors.red),
+            icon: const Icon(Icons.logout, color: Colors.blue),
             onPressed: () {
               Navigator.pushNamed(context, '/login');
             },
@@ -72,7 +73,7 @@ class _HomePageState extends State<Home> {
                 Navigator.pop(context);
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const Home()),
+                  MaterialPageRoute(builder: (context) => ListeVetements()),
                 );
               },
             ),
